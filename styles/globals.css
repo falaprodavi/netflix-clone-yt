@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600;
+
+
+    }
+}
+
+@layer components {
+    .headerLink {
+        @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[.4s];
+    }
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    transition: all ease 0.5s;
+}
+
+header.black {
+    background-color: #141414;
+}
